@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(28, 16, 87);
+  color: white;
+}
+
+.jumbotron {
+  background-color: tomato;
+  color: white;
+  text-align: center;
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+} */
+.first-column {
+  align-self: center;
+}
+.first-column p {
+  margin-bottom: 50px;
+}
+button {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(255, 147, 47);
+  margin-top: 20px;
+}

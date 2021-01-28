@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(236, 236, 236);
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.6rem;
+  color: #1c1e1f;
+}
+
+.missile-link {
+  text-decoration: none;
+  width: 100%;
+
+  line-height: 2rem;
+  color: rgb(236, 236, 236);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+#real-alert {
+  background-color: rgb(194, 34, 34);
+  order: 2;
+  margin-top: 2rem;
+  cursor: not-allowed;
+}
+#test-only {
+  background-color: #186cda;
+  text-transform: uppercase;
+  order: 1;
+}
