@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorite Program</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -21,19 +21,87 @@
     <div class="jumbotron">
       <h1>Dinky Video - A personal JavaScript project</h1>
     </div>
-    <div class="container-md d-flex px-4 py-2">
+    <div class="container-fluid d-flex justify-content-between">
+      <!-- Intro -->
       <div class="row">
-        <p>
-          Dinky Video is a personal Web Project, mobile-ready, created with
-          JavaScript.
-        </p>
-        <ul>
-          <li>Load data from API (https://www.themoviedb.org/)</li>
-          <li>Components created using JavaScript</li>
-          <li>Beautifuly designed with responsive styles</li>
-        </ul>
+        <div class="col-sm-6">
+          <p>
+            Dinky Video is a personal Web Project, mobile-ready, created with
+            JavaScript. Data is consumed from an API without using any library,
+            so this was created using JavaScript vanilla.
+          </p>
+          <ul>
+            <li>
+              Load data from
+              <a href="https://www.themoviedb.org/" target="_blank">API</a>
+            </li>
+            <li>Components created using JavaScript</li>
+            <li>Beautifuly designed with responsive styles</li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <p>
+            Check the project on my
+            <a href="https://github.com/fermolanoc/dinkymovies" target="_blank"
+              >GitHub</a
+            >
+            account
+          </p>
+        </div>
       </div>
     </div>
+    <!-- Samples -->
+    <div
+      class="container-fluid sample d-flex justify-content-between align-middle"
+    >
+      <div class="row">
+        <div class="col-md-3 mb-5">
+          <img
+            src="./assets/images/dinkyvideo-main.PNG"
+            class="rounded mx-auto d-block"
+            alt=""
+          />
+        </div>
+        <div class="col-md-3 mb-5 align-self-center">
+          <code
+            >const buttonElement = document.querySelector('#search');
+            <br />const inputElement = document.querySelector('#inputValue');
+            <br />const movieSearchable =
+            document.querySelector('#movies-searchable');<br />
+            const moviesContainer =
+            document.querySelector('#movies-container');</code
+          >
+        </div>
+
+        <div class="col-md-3 mb-5">
+          <img
+            src="./assets/images/dinkyvideo-search.PNG"
+            class="rounded mx-auto d-block"
+            alt=""
+          />
+        </div>
+        <div class="col-md-3 mb-5 align-self-center">
+          <code
+            >function getPopularMovies() { const path = '/movie/popular'; const
+            url = generateUrl(path);<br />const render = renderMovies.bind({
+            title: 'Popular Movies' }) requestMovies(url, render, handleError)
+            }</code
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Dinky Video</h5>
+        <p class="card-text">made with 💛 in Minnesota</p>
+        <a href="https://github.com/fermolanoc" class="btn btn-lg"
+          >Follow me on GitHub</a
+        >
+      </div>
+    </div>
+
     <!-- Bootstrap Scripts -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
