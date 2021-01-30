@@ -1,8 +1,46 @@
 * {
   font-family: "Dosis", sans-serif;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 :root {
   font-size: 62.5%;
+  --main-color: #011627;
+  --secondary-color: #d84727;
+  --text-color: #e6e4e4;
+}
+
+h1 {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h1,
+h2 {
+  font-weight: 700;
+}
+p,
+form {
+  font-size: 1.2rem;
+}
+
+body {
+  /* background-color: var(--main-color); */
+  /* need a gradient background */
+}
+.jumbotron {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+.btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-weight: 700;
+}
+.btn:hover {
+  color: white;
+  opacity: 0.9;
 }

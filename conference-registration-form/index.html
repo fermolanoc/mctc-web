@@ -18,6 +18,145 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <div class="jumbotron text-center">
+      <h1>Welcome. Please fill out our Conference Registration Form</h1>
+    </div>
+
+    <!-- Name, a text input for the registrant's name, max length 70 characters. Required.
+Password. Use a password input. Required.
+Email, using email input.  Required.
+T-shirt size, either small, medium, or large. Use select and option elements. Required.
+Date of birth, a date input element. Required. 
+Receive email? Two radio buttons to select if wanting to receive email from conference sponsors; yes or no. Required. The radio buttons should work as radio buttons, selecting one button should deselect the other.
+Choose sessions, Two checkbox elements to select if attending the morning, and/or afternoon conference sessions.  
+Special Requests, A textarea (for entering more than one line) any special requests. Set the size to be 7 rows and 70 columns. Not required.
+A submit button - input type = submit.
+(Note that clicking this button doesn't do anything, but once we have a web server, the submit button will be used to send form data to the server.)
+Each input element must have a name attribute.
+
+Your submit button doesn't need to do anything other than display validation messages when clicked. 
+ -->
+    <form action="" class="mx-4 px-4">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control"
+            maxlength="70"
+            required
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="email">e-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="@"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="tshirt">T-shirt Size</label>
+          <select id="tshirt" name="tshirt" class="form-control required">
+            <option selected value="">Choose a size</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="birthdate">Date of Birth</label>
+          <input
+            type="date"
+            name="birthdate"
+            id="birthdate"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="col-md-2">
+          <p>Receive e-mail? (from comference sponsors)</p>
+          <div class="form-check form-check-inline">
+            <input
+              type="radio"
+              name="radio-email"
+              id="radio-emailYes"
+              value="yes"
+              checked
+            />
+            <label for="radio-emailYes" class="form-check-label">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              type="radio"
+              name="radio-email"
+              id="radio-emailNo"
+              value="no"
+            />
+            <label for="radio-emailNo" class="form-check-label">No</label>
+          </div>
+        </div>
+        <div class="form-group col-md-2">
+          <p>Conference Sessions</p>
+          <div class="form-check form-check-inline">
+            <input
+              type="checkbox"
+              name="sessionOption"
+              id="session-morning"
+              class="form-check-input"
+            />
+            <label for="session-morning">Morning</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              type="checkbox"
+              name="sessionOption"
+              id="session-afternoon"
+              class="form-check-input"
+            />
+            <label for="session-afternoon">Afternoon</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="specialRequest"
+            >Any special request? Please leave us a brief message</label
+          >
+          <textarea
+            name="specialRequest"
+            id="specialRequest"
+            cols="70"
+            rows="7"
+            class="form-control"
+          ></textarea>
+        </div>
+
+        <div class="form-group col-md-4">
+          <button type="submit" class="w-50 col-lg-12 btn btn-lg btn-block">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+
     <!-- Bootstrap Scripts -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
